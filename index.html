@@ -45,7 +45,7 @@
         <section class="section">
             <div class="hero">
                 <h1>Эффективные решения<br> для вашего бизнеса</h1>
-                <a class="btn" href=""> Заказать услугу</a>
+                <buttton class="btn" type="button" data-open-modal> Заказать услугу</buttton>
             </div>
         </section>
         
@@ -356,7 +356,7 @@
                     <b class="attention">Подпишитесь на рассылку</b>
                     <form class="subscribe-form">
                         <input class="subscribe-input" type="email" name="email" placeholder="E-mail" autocomplete="email ">
-                        <button data-open-modal class="subscribe-button">Подписаться</button>
+                        <button class="subscribe-button btn" type="submit">Подписаться</button>
                     </form>
                 </div>
             </div>
@@ -366,11 +366,66 @@
 
     <div class="backdrop is-hidden" data-backdrop>
         <div class="modal">
-            <p>blBLABLA</p>
-            <button data-close-modal>close</button>
-        </div>
+            <form class="js-order-form">
+                <button class="close-button" type="button" data-close-modal>
+                    <svg class="close-icon">
+                        <use href="./images/modal-sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+            
+                <p>Оставьте свои данные, мы вам перезвоним</p>
+            
+                <div class="form-field">
+                    <input class="form-input" type="text" name="name" id="name">
+                    <label class="form-label" for="name"><svg class="form-icon">
+                            <use href="./images/modal-sprite.svg#icon-person"></use>
+                        </svg>Имя</label>
+                </div>
+            
+                <div class="form-field">
+                    <input class="form-input" type="tel" name="tel" id="tel">
+                    <label class="form-label" for="tel"><svg class="form-icon">
+                            <use href="./images/modal-sprite.svg#icon-phone"></use>
+                        </svg>Телефон</label>
+                </div>
+            
+            
+                <div class="form-field">
+                    <input class="form-input" type="email" name="email" id="email">
+                    <label class="form-label" for="email"><svg class="form-icon">
+                            <use href="./images/modal-sprite.svg#icon-email"></use>
+                        </svg>Почта</label>
+                </div>
+            
+                <div class="form-field last">
+                    <label for="comment"></label>
+                    <textarea class="form-input" class="comment" name="comment" id="comment" placeholder="Комментарий"></textarea>
+                </div>
+            
+                <div class="policy">
+                    <input type="checkbox" name="policy" id="policy">
+                    <label for="policy">Соглашаюсь с рассылкой и принимаю <span><a href="">Условия договора</a></span></label>
+                </div>
+            
+                <button class="submit-button btn" type="submit">Отправить</button>
+            </form>
     </div>
 
+        <script>
+            (() => {
+                document
+                    .querySelector('.js-order-form')
+                    .addEventListener('submit', e => {
+                        e.preventDefault();
+
+                        new FormData(e.currentTarget).forEach((value, name) =>
+                            console.log(`${name}: ${value}`),
+                        );
+
+                        e.currentTarget.reset();
+                    });
+            })();
+        </script>
 
     <script>
         const refs = {
