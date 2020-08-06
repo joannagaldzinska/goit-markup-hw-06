@@ -894,7 +894,7 @@ button{
 
 
 .form-field .comment{
-    padding: 12px 16px;    
+    padding: 12px 16px;  
 }
 
 .form-field.last{
@@ -986,7 +986,8 @@ textarea {
     cursor: pointer;
 }
 
-.close-button:hover .close-icon{
+.close-button:hover .close-icon,
+.close-button:focus .close-icon{
     fill: #2196F3;
 }
 
