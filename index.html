@@ -376,7 +376,7 @@
                 <p>Оставьте свои данные, мы вам перезвоним</p>
             
                 <div class="form-field">
-                    <input class="form-input" type="text" name="name" id="name" placeholder=" ">
+                    <input class="form-input" type="text" name="name" id="name" required placeholder=" ">
                     <label class="form-label" for="name">Имя</label>
                     <svg class="form-icon">
                         <use href="./images/modal-sprite.svg#icon-person"></use>
@@ -384,7 +384,7 @@
                 </div>
             
                 <div class="form-field">
-                    <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
+                    <input class="form-input" type="tel" name="tel" id="tel" required placeholder=" ">
                     <label class="form-label" for="tel">Телефон</label>
                     <svg class="form-icon">
                         <use href="./images/modal-sprite.svg#icon-phone"></use>
@@ -393,7 +393,7 @@
             
             
                 <div class="form-field">
-                    <input class="form-input" type="email" name="email" id="email" placeholder=" ">
+                    <input class="form-input" type="email" name="email" id="email" required placeholder=" ">
                     <label class="form-label" for="email">Почта</label>
                     <svg class="form-icon">
                         <use href="./images/modal-sprite.svg#icon-email"></use>
@@ -406,8 +406,8 @@
                 </div>
             
                 <div class="policy">
-                    <input type="checkbox" name="policy" id="policy">
-                    <label for="policy">Соглашаюсь с рассылкой и принимаю <span><a href="">Условия договора</a></span></label>
+                    <input class="checkbox" type="checkbox" name="policy" id="policy" required>
+                    <label class="policy-required" for="policy">Соглашаюсь с рассылкой и принимаю <span><a href="">Условия договора</a></span></label>
                 </div>
             
                 <button class="submit-button btn" type="submit">Отправить</button>
