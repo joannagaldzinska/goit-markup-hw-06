@@ -843,6 +843,8 @@ button{
 /* форма */
 
 .js-order-form{
+    display: flex;
+    flex-direction: column;
     height: 581px;
     width: 528px;
     padding: 40px;
